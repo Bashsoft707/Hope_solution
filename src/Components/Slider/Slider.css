@@ -1,0 +1,161 @@
+.slider {
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  display: grid;
+  align-items: center;
+  padding: 3em 0;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: linear-gradient(148.25deg, #a253d8 3%, #1545cb 89.85%);
+  opacity: 0.85;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.slider-info-big {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.slider-info-big h5 {
+  color: #fff;
+  font-family: "Poppins", Sans-serif;
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+.slider-info-big p {
+  color: #fff;
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+  margin-top: 1.5rem;
+}
+
+.slider-info-big a {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 40px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.3s ease-in;
+  border-radius: 25px;
+  background-color: #fe79a2;
+  border-color: #fe79a2;
+  margin-top: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.controls-theme {
+  position: absolute;
+  bottom: 50%;
+  color: #fff;
+  font-size: 20px;
+  margin: 0px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  line-height: 15px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 50px;
+}
+
+.next {
+  right: 20px;
+}
+
+.controls-theme span {
+  background: rgba(255, 255, 255, 0.21);
+  padding: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .slider {
+    min-height: 600px;
+  }
+
+  .container {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 568px) {
+  .slider {
+    min-height: 500px;
+  }
+
+  .slider-info-big {
+    margin-top: 70px;
+  }
+
+  .slider-info-big h5 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-info-big h5 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .slider-info-big {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 415px) {
+  .slider-info-big {
+    margin-top: 30px;
+  }
+
+  .slider-info-big h5 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 384px) {
+  .slider {
+    min-height: 480px;
+  }
+
+  .slider-info-big {
+    margin-top: 60px;
+  }
+
+  .slider-info-big h5 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
