@@ -97,6 +97,15 @@
   padding: 0.5rem;
 }
 
+.indicators {
+    display: flex;
+    justify-content: center;
+}
+
+.indicators > button {
+    margin: 5px;
+}
+
 @media (min-width: 992px) {
   .slider {
     min-height: 600px;

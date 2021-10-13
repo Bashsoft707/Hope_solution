@@ -79,7 +79,6 @@ const Footer = () => {
                   action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
                    className="subscribe_form relative mail_part"
                   required=""
-                  novalidate="true"
                 >
                   <input
                     type="email"
@@ -87,8 +86,6 @@ const Footer = () => {
                     id="newsletter-form-email"
                     placeholder="Email Address"
                      className="placeholder hide-on-focus"
-                    onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = ' Email Address '"
                     required=""
                   />
                   <button
@@ -113,7 +110,7 @@ const Footer = () => {
                 Copyright ©2021
                 All rights reserved | This is designed by
                 <span><AiOutlineHeart /></span>
-                <a href="https://bashir-portfolio.netlify.app/" target="_blank">
+                <a href="https://bashir-portfolio.netlify.app/" target="_blank" rel='noreferrer'>
                   Bashsofts
                 </a>
               </p>

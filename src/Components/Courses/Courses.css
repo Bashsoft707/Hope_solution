@@ -1,0 +1,172 @@
+.blog {
+    padding-bottom: 3rem;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+.title-small {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #7e7d7d;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.title-big {
+    font-size: 38px;
+    line-height: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.cols {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 4%);
+    margin: .5rem;
+}
+
+.card-header {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.course-details {
+    position: relative;
+    padding: 30px;
+    background: var(--bg-color);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.price-review {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-review p {
+    font-weight: 700;
+    font-size: 18px;
+    color: #fe79a2;
+}
+
+ul.rating-star li {
+    display: inline-block;
+}
+
+ul.rating-star li span.fa {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.w3l-courses .price-review span {
+    text-transform: uppercase;
+    line-height: 1.4;
+    color: #8c89a2;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+span.fa {
+    color: #1545cb;
+    opacity: .7;
+    font-size: 15px;
+    width: 15px;
+    vertical-align: 1px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.text-more {
+    margin-top: 2rem;
+}
+
+@media (max-width: 1080px) { 
+.title-big {
+    font-size: 32px !important;
+    line-height: 40px;
+}
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-bottom: 1.5rem;
+        max-width: 720px;
+    }
+
+    .cols {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card {
+        margin: 1rem;
+    }   
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .title-big {
+        margin-bottom: 3rem;
+    }
+
+    .row {
+        padding: 1rem;
+    }
+
+    .cols {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+}
