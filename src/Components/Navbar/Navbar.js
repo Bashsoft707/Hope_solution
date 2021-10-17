@@ -18,7 +18,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeNavbarBackground);
 
   return (
-    <nav className={backgroundChange ? "menu_fixed" : "navbar"}>
+    <nav className={backgroundChange ? "menu_fixed" : "navbar-header"}>
       <div className="nav-container">
         <div className="navbar-logo">
           <a href="/main" className="navbar-brand">

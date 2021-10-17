@@ -4,7 +4,7 @@ import "./Courses.css";
 
 const Courses = () => {
   return (
-    <section className="w3l-courses">
+    <section className="w3l-courses mt-5">
       <div className="blog" id="courses">
         <div className="container">
           <h5 className="title-small">Join our learn Courses</h5>
@@ -93,7 +93,7 @@ const Courses = () => {
             <p className="pt-md-3 sample text-center">
               Control your personal preference settings to get notified about
               appropriate courses
-              <Link to="/course">
+              <Link to="/coursePage">
                 View All Courses
                 <span className="pl-2 fa fa-long-arrow-right"></span>
               </Link>
