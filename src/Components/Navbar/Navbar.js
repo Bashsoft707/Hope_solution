@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className={backgroundChange ? "menu_fixed" : "navbar-header"}>
       <div className="nav-container">
         <div className="navbar-logo">
-          <a href="/main" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             Hope Solutions
           </a>
         </div>

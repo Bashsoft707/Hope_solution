@@ -4,6 +4,7 @@ import Post from './Post'
 import './News.css'
 
 const News = ({posts}) => {
+  console.log(posts)
   return (
     <div className='course-container'>
       {

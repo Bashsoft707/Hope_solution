@@ -4,6 +4,7 @@ import Courses from '../../Components/Courses/Courses'
 import Footer from '../../Components/Footer/Footer'
 import Navbar from '../../Components/Navbar/Navbar'
 import Slider from '../../Components/Slider/Slider'
+import Features from '../../Components/Features/Features'
 
 const Main = () => {
     const [ posts, setPosts ] = useState([]);
@@ -13,7 +14,6 @@ const Main = () => {
         .then(response => response.json())
         .then(data => {
             setPosts(data.articles);
-            console.log(data);
             console.log(data.articles)
         })
         .catch(err => console.log(err))
@@ -25,6 +25,7 @@ const Main = () => {
             <Slider width='100%' />
             <News posts={posts}/>
             <Courses />
+            <Features />
             <Footer />
         </div>
     )

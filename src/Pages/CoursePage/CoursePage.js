@@ -1,25 +1,26 @@
 import React from "react";
-import CourseList from "./CourseList";
-import { CourseData } from "../../Components/Courses/CoursesData";
+import { CourseData } from "./CoursesData";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
 import Pagination from "../../Components/Pagination/Pagination";
 import Slider from "../../Components/Slider/Slider";
+import CourseList from "./CourseList";
 
 const CoursePage = () => {
+  
   return (
     <div>
       <Navbar />
       <Slider />
       <div className="course-container">
-        {CourseData.length > 0 ? (
+        {CourseData.map.length > 0 ? (
           <>
             <Pagination
               data={CourseData}
               RenderComponent={CourseList}
-              title="posts"
-              pageLimit={5}
-              dataLimit={3}
+              title="Courses"
+              pageLimit={3}
+              dataLimit={1}
             />
           </>
         ) : (
