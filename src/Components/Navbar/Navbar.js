@@ -51,7 +51,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="navbar-list-items">
-              <a href="/#pricing" className="nav-link">
+              <a href="/notes" className="nav-link">
                 Story
               </a>
             </li>

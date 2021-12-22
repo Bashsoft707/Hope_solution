@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { nanoid } from "nanoid";
 import NoteList from "./NoteList";
-import { nanoid } from 'nanoid'
 import "./Notes.css";
 import NotesHeader from "./NotesHeader";
 import SearchNote from "./SearchNote";
 
-const Notes = () => {
+const App = () => {
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
@@ -15,21 +15,35 @@ const Notes = () => {
     {
       id: nanoid(),
       text: "This is my second note!",
-      date: "15/04/2021",
+      date: "21/04/2021",
     },
     {
       id: nanoid(),
       text: "This is my third note!",
-      date: "15/04/2021",
+      date: "28/04/2021",
     },
     {
       id: nanoid(),
-      text: "This is my first note!",
-      date: "15/04/2021",
+      text: "This is my new note!",
+      date: "30/04/2021",
     },
   ]);
+
   const [searchText, setSearchText] = useState("");
+
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
+
+    if (savedNotes) {
+      setNotes(savedNotes);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+  }, [notes]);
 
   const addNote = (text) => {
     const date = new Date();
@@ -47,21 +61,9 @@ const Notes = () => {
     setNotes(newNotes);
   };
 
-  useEffect(() => {
-    const savedNotes = JSON.parse(localStorage.getItem("notes-app-data"));
-
-    if (savedNotes) {
-      setNotes(savedNotes);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("notes-app-data", JSON.stringify(notes));
-  }, [notes]);
-
   return (
     <div className={`${darkMode && "dark-mode"}`}>
-      <div className="note-container">
+      <div className="container">
         <NotesHeader handleToggleDarkMode={setDarkMode} />
         <SearchNote handleSearchNote={setSearchText} />
         <NoteList
@@ -76,4 +78,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default App;
